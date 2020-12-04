@@ -46,3 +46,13 @@ inside ./config/page.php add
 ```
 
 to the stylesheets array
+
+### Tests
+
+To test the module first run composer install
+
+then inside the modules config folder create two new files "ipapi.txt" and "weatherapi.txt"
+
+place your api keys inside those files
+
+Then run make phpunit.
