@@ -10,7 +10,8 @@ composer require gufo/weather-module
 ### Configuration
 
 ```
-rsync -av ./vendor/gustavfors/weather-module/config ./
+rsync -av ./vendor/gustavfors/weather-module/config/router/ ./config/router/
+rsync -av ./vendor/gustavfors/weather-module/config/di/curl.php ./config/di/
 ```
 
 ### API Keys
@@ -34,7 +35,7 @@ to the paths array
 ### Styles
 
 ```
-rsync -av ./vendor/gustavfors/weather-module/css ./htdocs/css
+rsync -av ./vendor/gustavfors/weather-module/css/custom.css ./htdocs/css/
 ```
 
 inside ./config/page.php add 
