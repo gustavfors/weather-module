@@ -1,0 +1,34 @@
+{
+    "name": "gustavfors/weather-module",
+    "type": "library",
+    "description": "Weather module for anax",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gustav Fors",
+            "email": "fake@fake.com",
+            "homepage": "https://dbwebb.se",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/gustavfors/weather-module/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anax\\": "src/",
+            "Gufo\\": "src/"
+        }
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4",
+        "anax/commons": "^2.0.14"
+    },
+    "require-dev": {
+        "phpmetrics/phpmetrics": "^2",
+        "phpunit/phpunit": "^7",
+        "anax/anax": "^2.0.17"
+    }
+}
