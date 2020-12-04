@@ -4,7 +4,7 @@ Weather Module (kmom04)
 ### Installation
 
 ```
-composer require gufo/weather-module
+composer require gustavfors/weather-module
 ```
 
 ### Configuration
