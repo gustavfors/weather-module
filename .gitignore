@@ -5,3 +5,4 @@ memory::
 composer.lock
 config/weatherapi.txt
 config/ipapi.txt
+.env

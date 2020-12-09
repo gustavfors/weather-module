@@ -24,7 +24,8 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.4",
-        "anax/commons": "^2.0.14"
+        "anax/commons": "^2.0.14",
+        "symfony/dotenv": "^5.2"
     },
     "require-dev": {
         "phpmetrics/phpmetrics": "^2",
