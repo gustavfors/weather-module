@@ -15,7 +15,7 @@ build:
         tests-and-coverage:
             tests:
                 before:
-                    command: 'touch .env && echo 1234hej >> .env'
+                    command: 'echo ${IP_API_KEY}'
                 override:
                     -
                         command: "make phpunit"
