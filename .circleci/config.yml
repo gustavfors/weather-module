@@ -34,12 +34,3 @@ jobs:
 
             - run: make check
             - run: make test
-
-
-
-# notify:
-#     webhooks:
-#         # canax
-#         - url: https://webhooks.gitter.im/e/c8ff44f50de935adf880
-#         # canax/remserver
-#         - url: https://webhooks.gitter.im/e/851ae03f953461fd6075
