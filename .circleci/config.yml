@@ -14,10 +14,6 @@ jobs:
         working_directory: ~/repo
 
         steps:
-            - run:
-                name: "Print an env var stored in a Context"
-                command: touch .env && echo "hello" >> .env && echo "hello2" >> .env
-
             - checkout
 
             # Download and cache dependencies
@@ -27,6 +23,10 @@ jobs:
                     # fallback to using the latest cache if no exact match
                     # is found
                     - v1-dependencies-
+
+            - run:
+                name: "Print an env var stored in a Context"
+                command: touch .env && echo "hello" >> .env && echo "hello2" >> .env
 
             #- run: composer install -n --prefer-dist
             - run: make install
