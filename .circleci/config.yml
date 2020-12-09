@@ -5,9 +5,6 @@ jobs:
             # specify the version you desire here
             #- image: circleci/php:7.1.5-browsers
             - image: anax/dev
-        environment:
-            USER: Test123
-            USER2: Test123
 
             # Specify service dependencies here if necessary
             # CircleCI maintains a library of pre-built images
@@ -19,7 +16,7 @@ jobs:
         steps:
             - run:
                 name: "Print an env var stored in a Context"
-                command: echo ${WEATHER_API_KEY}
+                command: touch .env && echo "hello" >> .env && echo "hello2" >> .env
 
             - checkout
 
@@ -32,7 +29,6 @@ jobs:
                     - v1-dependencies-
 
             #- run: composer install -n --prefer-dist
-            - run: echo $IP_API_KEY
             - run: make install
 
             - save_cache:
