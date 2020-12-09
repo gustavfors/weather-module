@@ -24,7 +24,7 @@ inside ./config create two new files "ipapi.txt" and "weatherapi.txt"
 
 and place your api keys inside those files.
 
-### instructions for version 2 (including master)
+### instructions for version 2 and up (including master)
 
 inside ./vendor/gustavfors/weather-module/ create a .env file and with the following:
 
