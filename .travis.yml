@@ -15,10 +15,6 @@ matrix:
         - php: nightly
         - php: hhvm
 
-# addons:
-#     sonarcloud:
-#         organization: "canax"
-
 before_script:
     - make install
 
