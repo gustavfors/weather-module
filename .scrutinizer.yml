@@ -15,7 +15,9 @@ build:
         tests-and-coverage:
             tests:
                 before:
-                    command: 'touch .env && echo IP_API_KEY=${IP_API_KEY} >> .env && echo WEATHER_API_KEY=${WEATHER_API_KEY} >> .env'
+                    command: 'touch .env'
+                    command: 'echo ${IP_API_KEY} >> .env'
+                    command: 'echo ${WEATHER_API_KEY} >> .env'
                 override:
                     -
                         command: "make phpunit"
