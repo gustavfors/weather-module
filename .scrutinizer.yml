@@ -14,8 +14,8 @@ build:
 
         tests-and-coverage:
             tests:
-                # before:
-                #     command: 'echo hello'
+                before:
+                    command: 'echo hello world'
                 override:
                     -
                         command: "make phpunit"
