@@ -18,9 +18,20 @@ rsync -av ./vendor/gustavfors/weather-module/config/di/curl.php ./config/di/
 
 For the module to work you need two api keys one for the ip service and one for the weather service.
 
+### instructions for version 1
+
 inside ./config create two new files "ipapi.txt" and "weatherapi.txt"
 
 and place your api keys inside those files.
+
+### instructions for version 2 (including master)
+
+inside ./vendor/gustavfors/weather-module/ create a .env file and with the following:
+
+```
+IP_API_KEY=yourapikey
+WEATHER_API_KEY=yourapikey
+```
 
 ### views
 
