@@ -1,6 +1,8 @@
 Weather Module (kmom04)
 ==================================
 
+[![CircleCI](https://circleci.com/gh/gustavfors/weather-module.svg?style=svg)](https://circleci.com/gh/gustavfors/weather-module)
+
 ### Installation
 
 ```
