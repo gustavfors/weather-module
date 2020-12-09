@@ -26,7 +26,7 @@ jobs:
 
             - run:
                 name: "Print an env var stored in a Context"
-                command: touch .env && echo "hello" >> .env && echo "hello2" >> .env
+                command: touch .env && echo IP_API_KEY=${IP_API_KEY} >> .env && echo WEATHER_API_KEY=${WEATHER_API_KEY} >> .env
 
             #- run: composer install -n --prefer-dist
             - run: make install
