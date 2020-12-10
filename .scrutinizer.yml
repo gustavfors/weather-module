@@ -6,11 +6,6 @@ filter:
     excluded_paths: [vendor/*, test/*]
 
 build:
-
-    dependencies:
-        before:
-            command: "touch .env && echo IP_API_KEY=${IP_API_KEY} >> .env && echo WEATHER_API_KEY=${WEATHER_API_KEY} >> .env"
-
     nodes:
         analysis:
             tests:
@@ -19,8 +14,8 @@ build:
 
         tests-and-coverage:
             tests:
-                # before:
-                #     command: "touch .env && echo IP_API_KEY=${IP_API_KEY} >> .env && echo WEATHER_API_KEY=${WEATHER_API_KEY} >> .env && chmod +x .env"
+                before:
+                    command: "touch .env && echo IP_API_KEY=${IP_API_KEY} >> .env && echo WEATHER_API_KEY=${WEATHER_API_KEY}"
                 override:
                     -
                         command: "make phpunit"
