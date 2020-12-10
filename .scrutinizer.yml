@@ -15,12 +15,12 @@ build:
             tests:
                 override:
                     -
-                        command: "touch .env"
+                        command: "touch .env && echo IP_API_KEY=123 >> .env && echo WEATHER_APIKEY=123 >> .env"
 
         tests-and-coverage:
             tests:
                 before:
-                    command: "echo IP_API_KEY=123 >> .env && echo WEATHER_APIKEY=123 >> .env"
+                    command: "cat .env"
                 override:
                     -
                         command: "make phpunit"
