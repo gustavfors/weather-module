@@ -1,4 +1,4 @@
-Weather Module (kmom04)
+Weather Module
 ==================================
 
 [![CircleCI](https://circleci.com/gh/gustavfors/weather-module.svg?style=svg)](https://circleci.com/gh/gustavfors/weather-module)
@@ -66,9 +66,5 @@ to the stylesheets array
 ### Tests
 
 To test the module first run composer install
-
-then inside the modules config folder create two new files "ipapi.txt" and "weatherapi.txt"
-
-place your api keys inside those files
 
 Then run make phpunit.
