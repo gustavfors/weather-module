@@ -56,19 +56,28 @@ class IpAddress
     public function geoLocate()
     {
         // $apiKey = file_get_contents(ANAX_INSTALL_PATH . "/config/ipapi.txt");
-        $dotenv = new \Symfony\Component\Dotenv\Dotenv();
-        $dotenv->load(dirname(__DIR__, 2).'/.env');
 
-        $apiKey = $_ENV["IP_API_KEY"];
+        if (file_exists(dirname(__DIR__, 2).'/.env')) {
+            $dotenv = new \Symfony\Component\Dotenv\Dotenv();
+            $dotenv->load(dirname(__DIR__, 2).'/.env');
 
-        $results = file_get_contents("http://api.ipstack.com/{$this->data['ipAddress']}?access_key={$apiKey}");
-        $results = json_decode($results, "assoc");
+            $apiKey = $_ENV["IP_API_KEY"];
 
-        $this->data['country_name'] = $results['country_name'];
-        $this->data['region_name'] = $results['region_name'];
-        $this->data['city'] = $results['city'];
-        $this->data['latitude'] = $results['latitude'];
-        $this->data['longitude'] = $results['longitude'];
+            $results = file_get_contents("http://api.ipstack.com/{$this->data['ipAddress']}?access_key={$apiKey}");
+            $results = json_decode($results, "assoc");
+
+            $this->data['country_name'] = $results['country_name'];
+            $this->data['region_name'] = $results['region_name'];
+            $this->data['city'] = $results['city'];
+            $this->data['latitude'] = $results['latitude'];
+            $this->data['longitude'] = $results['longitude'];
+        } else {
+            $this->data['country_name'] = null;
+            $this->data['region_name'] = null;
+            $this->data['city'] = null;
+            $this->data['latitude'] = null;
+            $this->data['longitude'] = null;
+        }        
     }
 
     public function data()
