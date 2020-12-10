@@ -60,8 +60,6 @@ class IpAddress
         $dotenv->load(dirname(__DIR__, 2).'/.env');
 
         $apiKey = $_ENV["IP_API_KEY"];
-        var_dump($_ENV["IP_API_KEY"]);
-        var_dump($_ENV["WEATHER_API_KEY"]);
 
         $results = file_get_contents("http://api.ipstack.com/{$this->data['ipAddress']}?access_key={$apiKey}");
         $results = json_decode($results, "assoc");
