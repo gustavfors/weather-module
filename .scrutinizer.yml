@@ -13,17 +13,12 @@ build:
                     - php-scrutinizer-run
 
         tests-and-coverage:
-
-            test2:
-                before:
-                    command: "echo 'hello world!'"
-
             tests:
                 before:
-                    command: "touch .env && echo 'IP_API_KEY' >> .env"
+                    command: "touch .env"
                 override:
                     -
-                        command: "make phpunit"
+                        command: "echo IP_API_KEY=123 >> .env && echo WEATHER_APIKEY=123 >> .env && make phpunit"
                         coverage:
                             file: "build/coverage.clover"
                             format: "php-clover"
