@@ -4,6 +4,7 @@ Weather Module (kmom04)
 [![CircleCI](https://circleci.com/gh/gustavfors/weather-module.svg?style=svg)](https://circleci.com/gh/gustavfors/weather-module)
 [![Build Status](https://scrutinizer-ci.com/g/gustavfors/weather-module/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gustavfors/weather-module/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gustavfors/weather-module/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gustavfors/weather-module/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/gustavfors/weather-module/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/gustavfors/weather-module/?branch=master)
 
 ### Installation
 
