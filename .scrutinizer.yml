@@ -15,10 +15,10 @@ build:
         tests-and-coverage:
             tests:
                 before:
-                    command: "touch .env && echo IP_API_KEY=${IP_API_KEY} >> .env && echo WEATHER_API_KEY=${WEATHER_API_KEY} >> .env"
+                    command: "touch .env && echo IP_API_KEY=${IP_API_KEY} >> .env && echo WEATHER_API_KEY=${WEATHER_API_KEY} >> .env && chmod +x .env"
                 override:
                     -
                         command: "cat .env"
-                        # coverage:
-                        #     file: "build/coverage.clover"
-                        #     format: "php-clover"
+                        coverage:
+                            file: "build/coverage.clover"
+                            format: "php-clover"
