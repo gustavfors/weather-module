@@ -15,7 +15,8 @@ build:
         tests-and-coverage:
             tests:
                 before:
-                    command: 'touch .env'
+                    'touch .env && echo "Hello-World" >> .env'
+                    command: 'cat .env'
                 override:
                     -
                         command: "make phpunit"
