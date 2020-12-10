@@ -18,10 +18,11 @@ class Weather
         $this->lat = $lat;
         $this->lon = $lon;
         $this->curl = $curl;
-        $dotenv = new \Symfony\Component\Dotenv\Dotenv();
-        $dotenv->load(dirname(__DIR__, 2).'/.env');
-        $this->apiKey = $_ENV["WEATHER_API_KEY"];
+        // $dotenv = new \Symfony\Component\Dotenv\Dotenv();
+        // $dotenv->load(dirname(__DIR__, 2).'/.env');
+        // $this->apiKey = $_ENV["WEATHER_API_KEY"];
         // $this->apiKey = file_get_contents(ANAX_INSTALL_PATH . "/config/weatherapi.txt");
+         $this->apiKey = file_get_contents(ANAX_INSTALL_PATH . "/weatherapi.txt");
 
         $this->forecast();
         $this->history();

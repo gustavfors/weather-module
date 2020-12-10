@@ -55,11 +55,12 @@ class IpAddress
 
     public function geoLocate()
     {
-        // $apiKey = file_get_contents(ANAX_INSTALL_PATH . "/config/ipapi.txt");
-        $dotenv = new \Symfony\Component\Dotenv\Dotenv();
-        $dotenv->load(dirname(__DIR__, 2).'/.env');
+        //$apiKey = file_get_contents(ANAX_INSTALL_PATH . "/config/ipapi.txt");
+        $apiKey = file_get_contents(ANAX_INSTALL_PATH . "/ipapi.txt");
+        // $dotenv = new \Symfony\Component\Dotenv\Dotenv();
+        // $dotenv->load(dirname(__DIR__, 2).'/.env');
 
-        $apiKey = $_ENV["IP_API_KEY"];
+        // $apiKey = $_ENV["IP_API_KEY"];
 
         $results = file_get_contents("http://api.ipstack.com/{$this->data['ipAddress']}?access_key={$apiKey}");
         $results = json_decode($results, "assoc");
