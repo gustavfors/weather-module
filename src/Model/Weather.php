@@ -36,7 +36,7 @@ class Weather
     private function forecast()
     {
         if ($this->apiKey != "mock") {
-             $res = $this->curl->mcurl([
+            $res = $this->curl->mcurl([
                 "https://api.openweathermap.org/data/2.5/onecall?lat={$this->lat}&lon={$this->lon}&units=metric&exclude=hourly,minutely,current&appid={$this->apiKey}"
             ]);
 
@@ -97,8 +97,6 @@ class Weather
                 'day' => null
             ]);
         }
-
-        
     }
 
     public function getForecast()
